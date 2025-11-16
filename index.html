@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Edit Profile</title>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
 </head>
 <body>
   <h2>Edit Profile</h2>
@@ -14,26 +13,33 @@
     <button type="submit">Save</button>
   </form>
 
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyB38y_a7bV2e4ZKNvOLdsSZUtDSYZ4ztng",
+    authDomain: "gitkonek.firebaseapp.com",
+    databaseURL: "https://gitkonek-default-rtdb.firebaseio.com",
+    projectId: "gitkonek",
+    storageBucket: "gitkonek.firebasestorage.app",
+    messagingSenderId: "153573952718",
+    appId: "1:153573952718:web:9e980e37c0a2c3ca7c949f",
+    measurementId: "G-YH1YXWR03J"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   <script>
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyB38y_a7bV2e4ZKNvOLdsSZUtDSYZ4ztng",
-  authDomain: "gitkonek.firebaseapp.com",
-  databaseURL: "https://gitkonek-default-rtdb.firebaseio.com",
-  projectId: "gitkonek",
-  storageBucket: "gitkonek.firebasestorage.app",
-  messagingSenderId: "153573952718",
-  appId: "1:153573952718:web:9e980e37c0a2c3ca7c949f",
-  measurementId: "G-YH1YXWR03J"
-};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
